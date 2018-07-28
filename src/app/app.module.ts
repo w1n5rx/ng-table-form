@@ -1,3 +1,4 @@
+import { AppSettingsService } from './app-settings.service';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -13,7 +14,7 @@ import { Ng2SmartTableModule } from "ng2-smart-table";
     BrowserModule,
     Ng2SmartTableModule
   ],
-  providers: [],
+  providers: [AppSettingsService],
   bootstrap: [
     AppComponent
   ]
