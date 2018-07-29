@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from 'rxjs/Observable';
 
-import { AppSettingsService } from './app-settings.service';
+import { AppService } from './app.service';
 
 @Component({
   selector: "app-root",
@@ -9,7 +9,7 @@ import { AppSettingsService } from './app-settings.service';
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  title = "ng-table-form";
+  title: String = "ng-table-form";
 
   settings = {
     columns: {
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
         title: 'City'
       },
       start_date: {
-        title: 'Start date'
+        title: 'Start date',
       },
       end_date: {
         title: 'End date'
@@ -31,7 +31,22 @@ export class AppComponent implements OnInit {
         title: 'Price'
       },
       status: {
-        title: 'Status'
+        title: 'Status',
+        type: 'html',
+        editor: {
+          type: 'list',
+          config: {
+            list: [
+              { value: 'Often', title: 'Often' },
+              { value: 'Yearly', title: 'Yearly' },
+              { value: 'Monthly', title: 'Monthly' },
+              { value: 'Weekly', title: 'Weekly' },
+              { value: 'Seldom', title: 'Seldom' },
+              { value: 'Once', title: 'Once' },
+              { value: 'Never', title: 'Never' }
+            ],
+          },
+        }
       },
       color: {
         title: 'Color'
@@ -40,11 +55,11 @@ export class AppComponent implements OnInit {
   };
 
   data: Array<object>;
-  constructor(private appSettingsService: AppSettingsService) { }
+  constructor(private appSettingsService: AppService) { }
 
   ngOnInit() {
-    this.appSettingsService.getJSON().subscribe(data2 => {
-      this.data = data2;
+    this.appSettingsService.getJSON().subscribe(d => {
+      this.data = d;
     });
   }
 }

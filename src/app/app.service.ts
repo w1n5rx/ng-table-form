@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class AppSettingsService {
+export class AppService {
 
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
