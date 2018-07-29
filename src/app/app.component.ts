@@ -86,4 +86,17 @@ export class AppComponent implements OnInit {
     });
   }
 
+  let COMPARE_INSENSITIVE = (direction: any, a: any, b: any) => {
+  // Converting strings to lowercase
+  let first = new Date(a);
+  let second = new Date(b);
+
+  if (first.getTime() > second.getTime()) {
+    return -1 * direction;
+  }
+  if (first.getTime() < second.getTime()) {
+    return direction;
+  }
+  return 0;
+}
 }
