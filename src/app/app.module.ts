@@ -25,7 +25,7 @@ import { SmartTableDatepickerRenderComponent, SmartTableDatepickerComponent } fr
     OwlNativeDateTimeModule,
     FormsModule
   ],
-  exports: [SmartTableDatepickerRenderComponent]
+  exports: [SmartTableDatepickerRenderComponent],
   providers: [AppService],
   bootstrap: [
     AppComponent

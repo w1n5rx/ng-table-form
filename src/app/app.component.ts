@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   settings = {
     pager: {
-      perPage: 10,
+      perPage: 10
       // pagination default is 4; unchangeable :( open issue: https://github.com/akveo/ng2-smart-table/issues/590
     }
     columns: {
