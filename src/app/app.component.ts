@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     pager: {
       perPage: 10
       // pagination default is 4; unchangeable :( open issue: https://github.com/akveo/ng2-smart-table/issues/590
-    }
+    },
     columns: {
       id: {
         title: 'ID',
@@ -86,17 +86,4 @@ export class AppComponent implements OnInit {
     });
   }
 
-  let COMPARE_INSENSITIVE = (direction: any, a: any, b: any) => {
-  // Converting strings to lowercase
-  let first = new Date(a);
-  let second = new Date(b);
-
-  if (first.getTime() > second.getTime()) {
-    return -1 * direction;
-  }
-  if (first.getTime() < second.getTime()) {
-    return direction;
-  }
-  return 0;
-}
 }
