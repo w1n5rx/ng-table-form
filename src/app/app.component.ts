@@ -14,6 +14,20 @@ export class AppComponent implements OnInit {
   title: String = "ng-table-form";
 
   settings = {
+    add: {
+      addButtonContent: '<i class="material-icons">add_box</i>',
+      createButtonContent: '<i class="material-icons">save</i>',
+      cancelButtonContent: '<i class="material-icons">cancel</i>',
+    },
+    edit: {
+      editButtonContent: '<i class="material-icons">edit</i>',
+      saveButtonContent: '<i class="material-icons">save</i>',
+      cancelButtonContent: '<i class="material-icons">cancel</i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="material-icons">delete</i>',
+      confirmDelete: true,
+    },
     pager: {
       perPage: 10
       // pagination default is 4; unchangeable :( open issue: https://github.com/akveo/ng2-smart-table/issues/590
@@ -87,4 +101,11 @@ export class AppComponent implements OnInit {
     });
   }
 
+  onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
 }

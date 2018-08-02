@@ -2,4 +2,4 @@
   <a [routerLink]="'contracts'">Form</a> |
   <a [routerLink]="'customers'">Table</a>
 </p>
-<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+<ng2-smart-table [settings]="settings" [source]="data" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
