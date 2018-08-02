@@ -7,7 +7,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 import { AppService } from './app.service';
-import { SmartTableDatepickerRenderComponent, SmartTableDatepickerComponent } from './smart-table-datepicker.component';
+// tslint:disable-next-line:max-line-length
+import { SmartTableDatepickerRenderComponent, SmartTableDatepickerComponent } from './smart-table-datepicker/smart-table-datepicker.component';
 
 import { RouterModule, Routes } from '@angular/router';
 

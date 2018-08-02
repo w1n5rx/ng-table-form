@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { Observable } from 'rxjs/Observable';
 
 import { AppService } from './app.service';
-import { SmartTableDatepickerComponent, SmartTableDatepickerRenderComponent } from './smart-table-datepicker.component';
+// tslint:disable-next-line:max-line-length
+import { SmartTableDatepickerComponent, SmartTableDatepickerRenderComponent } from './smart-table-datepicker/smart-table-datepicker.component';
 
 @Component({
   selector: "app-root",
