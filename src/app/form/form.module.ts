@@ -1,16 +1,17 @@
 import { NgModule, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormComponent } from './form.component';
 
 @NgModule({
 	imports: [
-		CommonModule
+		BrowserModule,
+		ReactiveFormsModule
 	],
 	exports: [],
 	providers: [],
-	declarations: [
-		FormComponent
-	]
+	declarations: [FormComponent],
+	bootstrap: [FormComponent]
 })
 export class FormModule implements OnInit {
 	ngOnInit() {
