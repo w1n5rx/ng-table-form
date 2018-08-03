@@ -1,5 +1,7 @@
+<h1>Welcome to {{title}}!</h1>
+
 <p>
-  <a [routerLink]="'contracts'">Form</a> |
-  <a [routerLink]="'customers'">Table</a>
+  <a [routerLink]="'form'">Form</a> |
+  <a [routerLink]="'table'">Table</a>
 </p>
-<ng2-smart-table [settings]="settings" [source]="data" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
+<router-outlet></router-outlet>

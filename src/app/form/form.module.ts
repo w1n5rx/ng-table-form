@@ -1,5 +1,6 @@
 import { NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormComponent } from './form.component';
 
 @NgModule({
 	imports: [
@@ -7,7 +8,9 @@ import { CommonModule } from '@angular/common';
 	],
 	exports: [],
 	providers: [],
-	declarations: []
+	declarations: [
+		FormComponent
+	]
 })
 export class FormModule implements OnInit {
 	ngOnInit() {
