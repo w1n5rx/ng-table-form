@@ -27,16 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## References
-* https://danielykpan.github.io/date-time-picker/
-* https://akveo.github.io/ng2-smart-table/#/documentation
-* http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/
-* http://plnkr.co/edit/FpAIvZ8C7TaVAzvAwBSj?p=preview
-* https://github.com/akveo/ngx-admin/blob/master/src/app/pages/tables/smart-table/smart-table.component.ts
-* https://github.com/akveo/ng2-smart-table/pull/239
-* https://stackoverflow.com/a/47174992/5644090
-* https://stackoverflow.com/questions/26055429/angular-date-range-filter
-* https://github.com/akveo/ng2-smart-table/issues/563
-* https://github.com/akveo/ng2-smart-table/issues/52
-* https://github.com/akveo/ng2-smart-table/issues/354
-* https://gist.github.com/brgaulin/d49a3d0883fd60d1c1ab14210210482c
+## Limitation of my solution
+Can't perform search based on start date and end date on the displayed table due to an open issue for [ng2-smart-table](https://github.com/akveo/ng2-smart-table). Next I'm using a responsive table in Angular will make sure to implement my own or a better [boilerplate](https://www.ngdevelop.tech/best-angular-tables/)

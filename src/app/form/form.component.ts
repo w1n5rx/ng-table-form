@@ -1,5 +1,5 @@
+import { User } from './../User';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
 	selector: 'app-form',
@@ -7,18 +7,25 @@ import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@ang
 	styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+	user: User;
 
-	loginForm: FormGroup;
-	constructor(private fb: FormBuilder) {
-	}
+	constructor() { }
+
 	ngOnInit() {
-		this.loginForm = new FormGroup({
-			email: new FormControl(null, [Validators.required, Validators.minLength(4)]),
-			password: new FormControl(null, [Validators.required, Validators.maxLength(8)])
+		this.user = new User({
+			email: '', password: { pwd: '', confirm_pwd: '' }
 		});
 	}
-	loginUser() {
-		console.log(this.loginForm.status);
-		console.log(this.loginForm.value);
+
+	// Mock data
+	// user = new User({
+	// 	email: 'mockdata@example.de',
+	// 	password: { pwd: '', confirm_pwd: '' }
+	// });
+
+	onFormSubmit(value: User, valid: Boolean) {
+		this.user = value;
+		console.log(this.user);
+		console.log('valid: ' + valid);
 	}
 }
