@@ -104,4 +104,8 @@ export class TableComponent implements OnInit {
 			event.confirm.reject();
 		}
 	}
+
+	submitFilter(): void {
+		// Filter function goes here
+	}
 }

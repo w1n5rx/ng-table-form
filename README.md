@@ -28,4 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Limitation of my solution
-Can't perform search based on start date and end date on the displayed table due to an open issue for [ng2-smart-table](https://github.com/akveo/ng2-smart-table). Next I'm using a responsive table in Angular will make sure to implement my own or a better [boilerplate](https://www.ngdevelop.tech/best-angular-tables/)
+Can't perform search based on start date and end date on the displayed table due to an [open issue](https://github.com/akveo/ng2-smart-table/issues/711) for [ng2-smart-table](https://github.com/akveo/ng2-smart-table).
+Next I'm using a responsive table in Angular will make sure to implement my own or a better [boilerplate](https://www.ngdevelop.tech/best-angular-tables/)

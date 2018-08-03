@@ -1,1 +1,19 @@
+<div class="search-wrapper">
+	<label class="search-input-wrapper">
+		Start date:
+		<input placeholder="select a start date" [(ngModel)]="dateTime1" [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+		<owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+	</label>
+
+	<label class="search-input-wrapper">
+		End date:
+		<input placeholder="select an end date" [(ngModel)]="dateTime2" [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2">
+		<owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
+	</label>
+
+	<button ng-click="submitFilter()" class="search-button">Filter</button>
+
+	<!-- <h4>Start date: {{dateTime1}}</h4>
+	<h4>End date: {{dateTime2}}</h4> -->
+</div>
 <ng2-smart-table [settings]="settings" [source]="data" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
